@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
   </head>
-  <body>
-<header>
-<nav>
-  <a href="index.html">
+  <body class="page-body">
+<header class="header">
+<nav class="nav">
+  <a class="logo">
       <img src="img/logo.svg" alt="Логотип Седона">
   </a>
-    <ul>
+    <ul class="site-navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
@@ -20,25 +19,25 @@
   </nav>
 </header>
   <main>
-    <section>
+    <section class="filters">
       <h1>Фильтр</h1>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Инфраструктура</legend>
-          <ul>
-            <li>
+          <ul class="infrastructure">
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     Бассейн
                 </label>
             </li>
-            <li>
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     Парковка
                 </label>
             </li>
-            <li>
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     WI-FI
@@ -48,20 +47,20 @@
         </fieldset>
         <fieldset>
           <legend>Тип жилья:</legend>
-          <ul>
-            <li>
+          <ul class="type-of-housing">
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     Гостиница
                 </label>
             </li>
-            <li>
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     Мотель
                 </label>
             </li>
-            <li>
+            <li class="filter-checkbox">
                 <label>
                     <input type="checkbox">
                     Апартаменты
@@ -71,7 +70,7 @@
         </fieldset>
         <fieldset>
         <legend>Стоимость в сутки,&#8381;: </legend>
-          <ul>
+          <ul class="cost">
             <li>
               <label>
               <input type="text"  value="от 0">
@@ -95,15 +94,15 @@
         </fieldset>
       </form>
     </section>
-    <section>
+    <section class="filter-nav">
         <h2>Навигация фильтра</h2>
         <nav>
         <ul>
             <li>НАЙДЕНО:</li>
-            <li><a href="#">Сортировка</a></li>
-            <li><a href="#">по цене</a></li>
-            <li><a href="#">по типу</a></li>
-            <li><a href="#">по рейтингу</a></li>
+            <li class="filter-item"><a href="#">Сортировка</a></li>
+            <li class="filter-item"><a href="#">по цене</a></li>
+            <li class="filter-item"><a href="#">по типу</a></li>
+            <li class="filter-item"><a href="#">по рейтингу</a></li>
         </ul>
           <button type="button" name="button"><img src="img/icon/icon-up-dir.svg" alt=""></button>
           <button type="button" name="button"><img src="img/icon/icon-down-dir.svg" alt=""></button>
