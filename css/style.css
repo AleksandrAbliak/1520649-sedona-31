@@ -1,0 +1,359 @@
+:root {
+--background-blue: #81B3D2;
+--color-aimin-blue: #669EC0;
+--color-push-blue: #5496BD;
+--basic-white: #FFFFFF;
+--button-background: #766357;
+--special-background: #EEEEEE;
+--form-background: #F2F2F2;
+--color-filter: #CACACA;
+--color-black: #000000;
+--color-brown: #333333;
+--color-light-brown: #604E43;
+--color-dark-brown: #503E33;
+--color-light-grey: #BDBBBC;
+--color-grey-checkbox: #6A6A6A;
+}
+/*
+.page{
+width: 1280px;
+}*/
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.page-body {
+width: 1200px;
+margin-left: 40px;
+margin-right: 40px;
+background-color: var(--basic-white);
+font-family: "PT Sans", Arial, sans-serif;
+text-transform: uppercase;
+
+}
+/* Меню */
+.navigation-list{
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--color-black);
+}
+.navigation-list:hover{
+  background-color: var(--background-blue);
+}
+.navigation-list:active{
+  background-color: var(--color-filter);
+}
+.active{
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--button-background);
+}
+/* блок sedona welcome */
+.main-header-img{
+  background-image: url("../img/background-index.jpg");
+  width: 1200px;
+  height: 509px;
+}
+.main-inscription{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: center;
+text-transform: uppercase;
+}
+.main-inscription-paragraph{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: center;
+text-transform: uppercase;
+
+}
+/* Причины */
+.content-block-1{
+  background-color: var(--background-blue);
+  width: 400px;
+  height: 256px;
+}
+.content-block-2{
+  background-color: var(--background-blue);
+  width: 400px;
+  height: 256px;
+}
+.content-list-3{
+  background-color: var(--special-background);
+}
+.heading-index{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 0px;
+text-align: center;
+}
+
+.content-p-index{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+text-align: center;
+}
+.form-header{
+  font-family: PT Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.form-p{
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+/* блок поиска гостиницы */
+.button-search{
+  background-color: #766357;
+  color: var(--basic-white);
+  width: 568px;
+  height: 86px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+}
+.button-search:hover{
+  background-color: #604E43;
+}
+.button-search:active{
+  background-color: #503E33;
+}
+/* footer */
+.footer-contacts p{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0px;
+color: var(--color-black);
+}
+.footer-contacts a{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0px;
+color: var(--color-black);
+}
+.button-social{
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px;
+  height: 48px;
+  background-color: var(--background-blue);
+  text-align: center;
+}
+.button-social:hover{
+  background-color: var(--color-aimin-blue);
+}
+.logo-htmlacademy:hover svg path{
+  fill: var(--background-blue);
+}
+.logo-htmlacademy:active svg path{
+  fill: var(--color-light-grey);
+}
+/*catalog*/
+.filters{
+  background-image: url("../img/catalog/background-filter.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px 217px;
+}
+li .filter-checkbox{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+text-align: left;
+}
+.header-filter{
+  font-family: PT Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.filter-nav-list{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: left;
+}
+.filter-item
+{font-family: PT Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+}
+.filter-item-1{
+border-bottom: 1px dashed var(--color-filter);
+font-family: PT Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+color: var(--color-filter);
+}
+.filter-item-1:hover{
+color: var(--background-blue);
+border-bottom: 1px dashed var(--background-blue);
+}
+.filter-item-1:active{
+  color: var(--color-black);
+  border: none;
+}
+.filter-item-1:visited{
+  color: var(--background-blue);
+  border: none;
+}
+.filter-active{
+  font-family: PT Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--background-blue);
+}
+.button-filter{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+width: 137px;
+height: 36px;
+background-image: none;
+background-color: transparent;
+border: 2px solid var(--basic-white);
+color: var(--basic-white);
+}
+.button-filter:hover{
+  background-color: var(--basic-white);
+  color: var(--color-black);
+}
+/*Список отелей*/
+.title{
+font-family: PT Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0px;
+}
+.title:hover{
+  color: var(--background-blue);
+}
+.title:active{
+  color: var(--form-background)
+}
+.result{
+  color: var(--color-brown);
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+}
+/*кнопка "подробнее*/
+.btn-info{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 0px;
+background-color: var(--background-blue);
+color: var(--basic-white);
+border: none;
+}
+.btn-info:hover{
+  background-color: var(--color-aimin-blue);
+}
+.btn-info:active{
+  background-color: var(--color-push-blue);
+}
+.btn-reservation{
+  border: none;
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 0px;
+background-color: var(--button-background);
+color: var(--basic-white);
+}
+.btn-reservation:hover{
+  background-color: var(--color-light-brown);
+}
+.btn-reservation:active{
+  background-color: var(--color-dark-brown);
+}
+.rating{
+font-family: PT Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+text-align: center;
+background-color: var(--form-background);
+width: 110px;
+height: 27px;
+}
