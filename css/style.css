@@ -14,6 +14,22 @@
 --color-light-grey: #BDBBBC;
 --color-grey-checkbox: #6A6A6A;
 }
+@font-face {
+  font-family: "PT Sans";
+  src:
+  url("fonts/PTSans.woff2") format("wolff2")
+  url("fonts/PTSans.woff") format("wolff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PT Sans";
+  src:
+  url("fonts/PTSans.woff2") format("wolff2")
+  url("fonts/PTSans.woff") format("wolff");
+  font-style: normal;
+  font-weight: 700;
+}
 /*
 .page{
 width: 1280px;
@@ -46,10 +62,10 @@ text-transform: uppercase;
   color: var(--color-black);
 }
 .navigation-list:hover{
-  background-color: var(--background-blue);
+  color: var(--background-blue);
 }
 .navigation-list:active{
-  background-color: var(--color-filter);
+  color: var(--color-filter);
 }
 .active{
   font-family: PT Sans;
@@ -89,17 +105,17 @@ text-transform: uppercase;
 
 }
 /* Причины */
-.content-block-1{
+.content-block-hotel {
   background-color: var(--background-blue);
   width: 400px;
   height: 256px;
 }
-.content-block-2{
+.content-block-bridge{
   background-color: var(--background-blue);
   width: 400px;
   height: 256px;
 }
-.content-list-3{
+.content-background {
   background-color: var(--special-background);
 }
 .heading-index{
@@ -141,7 +157,7 @@ text-align: center;
 }
 /* блок поиска гостиницы */
 .button-search{
-  background-color: #766357;
+  background-color: var(--button-background);
   color: var(--basic-white);
   width: 568px;
   height: 86px;
@@ -151,10 +167,10 @@ text-align: center;
   border: none;
 }
 .button-search:hover{
-  background-color: #604E43;
+  background-color: var(--color-light-brown);
 }
 .button-search:active{
-  background-color: #503E33;
+  background-color: var(--color-dark-brown);
 }
 /* footer */
 .footer-contacts p{
@@ -226,8 +242,8 @@ line-height: 26px;
 letter-spacing: 0px;
 text-align: left;
 }
-.filter-item
-{font-family: PT Sans;
+.filter-item-sort {
+font-family: PT Sans;
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
@@ -235,7 +251,7 @@ line-height: 18px;
 letter-spacing: 0px;
 text-align: left;
 }
-.filter-item-1{
+.filter-item {
 border-bottom: 1px dashed var(--color-filter);
 font-family: PT Sans;
 font-size: 12px;
@@ -246,15 +262,15 @@ letter-spacing: 0px;
 text-align: left;
 color: var(--color-filter);
 }
-.filter-item-1:hover{
+.filter-item:hover{
 color: var(--background-blue);
 border-bottom: 1px dashed var(--background-blue);
 }
-.filter-item-1:active{
+.filter-item:active{
   color: var(--color-black);
   border: none;
 }
-.filter-item-1:visited{
+.filter-item:visited{
   color: var(--background-blue);
   border: none;
 }
@@ -294,6 +310,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 26px;
 letter-spacing: 0px;
+color: var(--color-black);
 }
 .title:hover{
   color: var(--background-blue);
