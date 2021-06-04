@@ -157,6 +157,12 @@ text-align: center;
 }
 /* блок поиска гостиницы */
 .button-search{
+  font-family: PT Sans;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
   background-color: var(--button-background);
   color: var(--basic-white);
   width: 568px;
@@ -284,6 +290,12 @@ border-bottom: 1px dashed var(--background-blue);
   text-align: left;
   color: var(--background-blue);
 }
+.arrow-sort:hover svg path{
+  fill: var(--color-black);
+}
+.arrow-sort:active svg path{
+  fill: var(--background-blue);
+}
 .button-filter{
 font-family: PT Sans;
 font-size: 14px;
@@ -338,6 +350,7 @@ letter-spacing: 0px;
 background-color: var(--background-blue);
 color: var(--basic-white);
 border: none;
+text-transform: uppercase;
 }
 .btn-info:hover{
   background-color: var(--color-aimin-blue);
@@ -355,6 +368,7 @@ line-height: 21px;
 letter-spacing: 0px;
 background-color: var(--button-background);
 color: var(--basic-white);
+text-transform: uppercase;
 }
 .btn-reservation:hover{
   background-color: var(--color-light-brown);
