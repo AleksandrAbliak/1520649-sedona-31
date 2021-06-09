@@ -30,10 +30,10 @@
   font-style: normal;
   font-weight: 700;
 }
-/*
 .page{
-width: 1280px;
-}*/
+  height: 100%;
+  background-color: var(--special-background);
+}
 li {
   list-style-type: none;
 }
@@ -42,16 +42,30 @@ a {
 }
 
 .page-body {
-width: 1200px;
-margin-left: 40px;
-margin-right: 40px;
+min-width: 1200px;
 background-color: var(--basic-white);
 font-family: "PT Sans", Arial, sans-serif;
 text-transform: uppercase;
-
+display: grid;
+grid-template-rows: min-content 1fr min-content;
+align-content: start;
+margin-left: 40px;
+margin-right: 40px;
 }
 /* Меню */
-.navigation-list{
+.header{
+  outline: 5px solid red;
+}
+.nav{
+  display: grid;
+  justify-content: stretch;
+}
+.logo{
+  display: grid;
+  justify-self: center;
+  outline: 2px solid green;
+}
+.navigation-list {
   font-family: PT Sans;
   font-size: 14px;
   font-style: normal;
@@ -60,6 +74,9 @@ text-transform: uppercase;
   letter-spacing: 0px;
   text-align: center;
   color: var(--color-black);
+  display: grid;
+  grid-template-columns: repeat( 4, 1fr);
+
 }
 .navigation-list:hover{
   color: var(--background-blue);
@@ -78,10 +95,12 @@ text-transform: uppercase;
   color: var(--button-background);
 }
 /* блок sedona welcome */
+.main-container{
+  padding: 0;
+}
 .main-header-img{
   background-image: url("../img/background-index.jpg");
-  width: 1200px;
-  height: 509px;
+  background-size: cover;
 }
 .main-inscription{
 font-family: PT Sans;
@@ -93,6 +112,7 @@ letter-spacing: 0px;
 text-align: center;
 text-transform: uppercase;
 }
+
 .main-inscription-paragraph{
 font-family: PT Sans;
 font-size: 14px;
@@ -102,21 +122,49 @@ line-height: 26px;
 letter-spacing: 0px;
 text-align: center;
 text-transform: uppercase;
-
 }
 /* Причины */
+
+.container-hotel {
+  outline: 2px solid green;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0;
+  margin: 0;
+}
+.container-aside{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+}
 .content-block-hotel {
   background-color: var(--background-blue);
-  width: 400px;
-  height: 256px;
 }
+.content-item-bridge{
+  outline: 2px solid green;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 0;
+}
+
 .content-block-bridge{
   background-color: var(--background-blue);
-  width: 400px;
   height: 256px;
 }
+
+.content-img-bridge{
+  align-content: start;
+}
 .content-background {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 256px;
   background-color: var(--special-background);
+}
+.form-search{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
 }
 .heading-index{
 font-family: PT Sans;
@@ -171,6 +219,7 @@ text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
   border: none;
+  justify-self: center;
 }
 .button-search:hover{
   background-color: var(--color-light-brown);
@@ -179,6 +228,10 @@ text-align: center;
   background-color: var(--color-dark-brown);
 }
 /* footer */
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .footer-contacts p{
 font-family: PT Sans;
 font-size: 21px;
@@ -204,6 +257,7 @@ color: var(--color-black);
   height: 48px;
   background-color: var(--background-blue);
   text-align: center;
+
 }
 .button-social:hover{
   background-color: var(--color-aimin-blue);
@@ -218,8 +272,13 @@ color: var(--color-black);
 .filters{
   background-image: url("../img/catalog/background-filter.jpg");
   background-repeat: no-repeat;
-  background-size: 1200px 217px;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  outline: 2px solid yellow;
+  align-self: stretch;
 }
+
 li .filter-checkbox{
 font-family: PT Sans;
 font-size: 14px;
@@ -238,6 +297,11 @@ text-align: left;
   letter-spacing: 0px;
   text-align: left;
   text-transform: uppercase;
+}
+.filter-nav{
+  outline: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .filter-nav-list{
 font-family: PT Sans;
@@ -323,12 +387,24 @@ font-weight: 700;
 line-height: 26px;
 letter-spacing: 0px;
 color: var(--color-black);
+grid-column: 2 / 3;
+grid-row: 1 / 1;
 }
 .title:hover{
   color: var(--background-blue);
 }
 .title:active{
   color: var(--form-background)
+}
+.resuit-hotels{
+  outline: 2px solid yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr  2fr;
+  grid-template-rows: 51px 51px 51px;
+  grid-column: 5px;
+}
+.img-result{
+  grid-row: 2 / 3;
 }
 .result{
   color: var(--color-brown);
@@ -338,8 +414,11 @@ color: var(--color-black);
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 2;
 }
 /*кнопка "подробнее*/
+
 .btn-info{
 font-family: PT Sans;
 font-size: 14px;
@@ -351,6 +430,8 @@ background-color: var(--background-blue);
 color: var(--basic-white);
 border: none;
 text-transform: uppercase;
+grid-column: 2 / 2;
+grid-row: 3 / 3;
 }
 .btn-info:hover{
   background-color: var(--color-aimin-blue);
@@ -369,6 +450,8 @@ letter-spacing: 0px;
 background-color: var(--button-background);
 color: var(--basic-white);
 text-transform: uppercase;
+grid-column: 3 / 3;
+grid-row: 3 / 3;
 }
 .btn-reservation:hover{
   background-color: var(--color-light-brown);
@@ -387,4 +470,6 @@ text-align: center;
 background-color: var(--form-background);
 width: 110px;
 height: 27px;
+grid-column: 6 / 6;
+grid-row: 2 / 2;
 }

@@ -26,7 +26,8 @@
       <h1>Фильтр</h1>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
-          <legend class="header-filter">Инфраструктура</legend>
+          <div class="grid-info">
+          <legend class="header-filter" >Инфраструктура</legend>
                 <label>
                     <input type="checkbox">
                     Бассейн
@@ -39,8 +40,10 @@
                     <input type="checkbox">
                     WI-FI
                 </label>
+          </div>
         </fieldset>
         <fieldset>
+          <div class="grid-type">
           <legend class="header-filter">Тип жилья:</legend>
                 <label>
                     <input type="checkbox">
@@ -54,9 +57,10 @@
                     <input type="checkbox">
                     Апартаменты
                 </label>
+          </div>
         </fieldset>
         <fieldset>
-          <legend class="header-filter">Стоимость в сутки,&#8381;: </legend>
+          <legend class="header-filter grid-cost">Стоимость в сутки,&#8381;: </legend>
               <label class="form-cost">
               <input type="text">
               </label>
@@ -90,26 +94,25 @@
               </a></li>
               <li><a href="#" class="arrow-sort">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10L0 0H11" fill="#CACACA"
-"/>
+                <path d="M5.5 10L0 0H11" fill="#CACACA"/>
                 </svg>
               </a></li>
           </ul>
 
         </nav>
     </section>
-    <section>
-      <img src="img/catalog/amara.jpg" width="135" height="90" alt="">
+    <section class="resuit-hotels">
+      <img src="img/catalog/amara.jpg" class="img-result" width="135" height="90" alt="">
         <h3><a href="#" class="title">Amara Resort & Spa</a></h3>
         <ul class="result">
             <li>Гостиница</li>
             <li>от 4000&#8381;</li>
         </ul>
-            <button type="button" class="btn-info">Подробнее</button>
-            <button type="submit" class="btn-reservation">Забронировать</button>
+            <button type="button" class="btn-info btn-grid">Подробнее</button>
+            <button type="submit" class="btn-reservation btn-grid">Забронировать</button>
         <p class="rating">Рейтинг: 8,5</p>
     </section>
-    <section>
+    <section class="resuit-hotels">
       <img src="img/catalog/desert.jpg" width="135" height="90" alt="">
         <h3><a href="#" class="title">Desert Quail Inn</a></h3>
         <ul class="result">
@@ -120,7 +123,7 @@
             <button type="submit" class="btn-reservation">Забронировать</button>
         <p class="rating">Рейтинг: 8,9</p>
     </section>
-    <section>
+    <section class="resuit-hotels">
       <img src="img/catalog/villas.jpg" width="135" height="90" alt="">
         <h3><a href="#" class="title">Villas at Poco Diablo</a></h3>
         <ul class="result">
