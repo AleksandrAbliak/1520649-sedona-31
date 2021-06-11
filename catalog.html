@@ -16,120 +16,134 @@
   <ul class="site-navigation">
       <li><a href="#" class="navigation-list">Информация</a></li>
       <li><a href="#" class="navigation-list">Фото и видео</a></li>
-      <li><a href="#" class="navigation-list">Карта штата</a></li>
-      <li><a href="catalog.html" class="active">Гостиницы</a></li>
+      <li class="navigation-right"><a href="#" class="navigation-list">Карта штата</a></li>
+      <li class="navigation-right"><a class="navigation-list active">Гостиницы</a></li>
   </ul>
   </nav>
 </header>
   <main class="main-catalog">
-    <section class="filters">
-      <h1>Фильтр</h1>
-      <form action="https://echo.htmlacademy.ru" method="get">
+    <section>
+      <!-- <h1>Фильтр</h1>-->
+      <form action="https://echo.htmlacademy.ru" class="filters" method="get">
         <fieldset>
-          <div class="grid-info">
+          <!-- Я вернул сюда списки для удобства, тогда колонки стали в нормальный вид
+         Или лучше так не делать и седлать другим вариантом?-->
           <legend class="header-filter" >Инфраструктура</legend>
+          <ul>
+            <li>
                 <label>
                     <input type="checkbox">
                     Бассейн
                 </label>
+            </li>
+            <li>
                 <label>
                     <input type="checkbox">
                     Парковка
                 </label>
+            </li>
+            <li>
                 <label>
                     <input type="checkbox">
                     WI-FI
                 </label>
+            </li>
+            </ul>
           </div>
         </fieldset>
         <fieldset>
-          <div class="grid-type">
           <legend class="header-filter">Тип жилья:</legend>
+          <ul>
+            <li>
                 <label>
                     <input type="checkbox">
                     Гостиница
                 </label>
+            </li>
+            <li>
                 <label>
                     <input type="checkbox">
                     Мотель
                 </label>
+            </li>
+            <li>
                 <label>
                     <input type="checkbox">
                     Апартаменты
                 </label>
-          </div>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <legend class="header-filter grid-cost">Стоимость в сутки,&#8381;: </legend>
+          <ul>
+            <li>
               <label class="form-cost">
               <input type="text">
               </label>
               <label class="form-cost">
               <input type="text">
               </label>
+            </li>
+            <li>
         <label>
             <input type="range" min="0">
         </label>
+        </li>
         <label>
               <button type="submit" name="button" class="button-filter">ПОКАЗАТЬ</button>
         </label>
+        </ul>
         </fieldset>
       </form>
     </section>
     <section>
         <h2>Навигация фильтра</h2>
-        <nav class="filter-nav">
-        <ul>
+        <nav>
+        <ul class="filter-nav">
             <li class="filter-nav-list">НАЙДЕНО:</li>
             <li class="filter-item-sort">Сортировка:</li>
             <li><a href="#" class="filter-active">по цене</a></li>
             <li><a href="#" class="filter-item">по типу</a></li>
             <li><a href="#" class="filter-item">по рейтингу</a></li>
-        </ul>
-          <ul>
-              <li><a href="" class="arrow-sort">
+            <li><a href="" class="arrow-sort">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
                 </svg>
-              </a></li>
-              <li><a href="#" class="arrow-sort">
+              </a>
+              <a href="#" class="arrow-sort">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" fill="#CACACA"/>
                 </svg>
-              </a></li>
+              </a>
+            </li>
           </ul>
 
         </nav>
     </section>
     <section class="resuit-hotels">
       <img src="img/catalog/amara.jpg" class="img-result" width="135" height="90" alt="">
-        <h3><a href="#" class="title">Amara Resort & Spa</a></h3>
-        <ul class="result">
-            <li>Гостиница</li>
-            <li>от 4000&#8381;</li>
-        </ul>
+        <h3 class="name-hotel"><a href="#" class="title">Amara Resort & Spa</a></h3>
+            <p class="result">Гостиница</p>
+            <p class="result-cost">от 4000&#8381;</p>
             <button type="button" class="btn-info btn-grid">Подробнее</button>
             <button type="submit" class="btn-reservation btn-grid">Забронировать</button>
         <p class="rating">Рейтинг: 8,5</p>
     </section>
     <section class="resuit-hotels">
-      <img src="img/catalog/desert.jpg" width="135" height="90" alt="">
-        <h3><a href="#" class="title">Desert Quail Inn</a></h3>
-        <ul class="result">
-            <li>Мотель</li>
-            <li>от 3000&#8381;</li>
-        </ul>
+      <img src="img/catalog/desert.jpg" class="img-result" width="135" height="90" alt="">
+        <h3 class="name-hotel"><a href="#" class="title">Desert Quail Inn</a></h3>
+            <p class="result">Мотель</p>
+            <p class="result-cost">от 3000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
         <p class="rating">Рейтинг: 8,9</p>
     </section>
     <section class="resuit-hotels">
-      <img src="img/catalog/villas.jpg" width="135" height="90" alt="">
-        <h3><a href="#" class="title">Villas at Poco Diablo</a></h3>
-        <ul class="result">
-            <li>Апартаменты</li>
-            <li>от 2000&#8381;</li>
-        </ul>
+      <img src="img/catalog/villas.jpg" class="img-result" width="135" height="90" alt="">
+        <h3 class="name-hotel"><a href="#" class="title">Villas at Poco Diablo</a></h3>
+            <p class="result">Апартаменты</p>
+            <p class="result-cost">от 2000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
         <p class="rating">Рейтинг: 9,2</p>

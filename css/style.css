@@ -42,6 +42,7 @@ a {
 }
 
 .page-body {
+width: 1200px;
 min-width: 1200px;
 background-color: var(--basic-white);
 font-family: "PT Sans", Arial, sans-serif;
@@ -49,21 +50,26 @@ text-transform: uppercase;
 display: grid;
 grid-template-rows: min-content 1fr min-content;
 align-content: start;
-margin-left: 40px;
-margin-right: 40px;
+margin: 0 auto;
 }
 /* Меню */
-.header{
-  outline: 5px solid red;
-}
 .nav{
   display: grid;
   justify-content: stretch;
 }
 .logo{
-  display: grid;
-  justify-self: center;
-  outline: 2px solid green;
+position: absolute;
+left: 0;
+right: 0;
+margin: auto;
+width: 138px;
+}
+.site-navigation{
+display: grid;
+grid-template-columns: repeat( 4, 1fr);
+padding-left: 0;
+margin-top: 15px;
+margin-bottom: 15px;
 }
 .navigation-list {
   font-family: PT Sans;
@@ -74,9 +80,9 @@ margin-right: 40px;
   letter-spacing: 0px;
   text-align: center;
   color: var(--color-black);
-  display: grid;
-  grid-template-columns: repeat( 4, 1fr);
-
+}
+.navigation-right{
+  text-align: right;
 }
 .navigation-list:hover{
   color: var(--background-blue);
@@ -85,13 +91,6 @@ margin-right: 40px;
   color: var(--color-filter);
 }
 .active{
-  font-family: PT Sans;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: 0px;
-  text-align: center;
   color: var(--button-background);
 }
 /* блок sedona welcome */
@@ -100,7 +99,14 @@ margin-right: 40px;
 }
 .main-header-img{
   background-image: url("../img/background-index.jpg");
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-size: cover;
+  text-align: center;
+}
+.main-header-block{
+  padding-top: 38px;
+  padding-bottom: 55px;
 }
 .main-inscription{
 font-family: PT Sans;
@@ -126,45 +132,52 @@ text-transform: uppercase;
 /* Причины */
 
 .container-hotel {
-  outline: 2px solid green;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(4, 256px);
   padding: 0;
   margin: 0;
 }
-.container-aside{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0;
+.content-aside-house{
+ grid-column: 1;
+ grid-row: 2;
+}
+.content-aside-food{
+ grid-column: 2;
+ grid-row: 2;
+}
+.content-aside-souvenir{
+  grid-column: 3;
+  grid-row: 2;
 }
 .content-block-hotel {
   background-color: var(--background-blue);
 }
-.content-item-bridge{
-  outline: 2px solid green;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-bottom: 0;
-}
-
-.content-block-bridge{
-  background-color: var(--background-blue);
-  height: 256px;
-}
 
 .content-img-bridge{
-  align-content: start;
+  grid-column: 1 / 3;
+  grid-row: 3;
 }
-.content-background {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 256px;
+.content-block-bridge{
+  grid-column: 3;
+  grid-row: 3;
+  background-color: var(--background-blue);
+}
+
+.content-space{
+background-color: var(--special-background);
+grid-column: 1;
+grid-row: 4;
+}
+.content-road{
   background-color: var(--special-background);
+  grid-column: 2;
+  grid-row: 4;
 }
-.form-search{
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
+.content-tourist{
+  background-color: var(--special-background);
+  grid-column: 3;
+  grid-row: 4;
 }
 .heading-index{
 font-family: PT Sans;
@@ -204,6 +217,11 @@ text-align: center;
   text-align: center;
 }
 /* блок поиска гостиницы */
+.form-search{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
 .button-search{
   font-family: PT Sans;
   font-size: 21px;
@@ -251,13 +269,12 @@ letter-spacing: 0px;
 color: var(--color-black);
 }
 .button-social{
-  display: inline-block;
-  vertical-align: middle;
   width: 46px;
   height: 48px;
   background-color: var(--background-blue);
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button-social:hover{
   background-color: var(--color-aimin-blue);
@@ -273,9 +290,10 @@ color: var(--color-black);
   background-image: url("../img/catalog/background-filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 26px;
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  outline: 2px solid yellow;
   align-self: stretch;
 }
 
@@ -299,9 +317,8 @@ text-align: left;
   text-transform: uppercase;
 }
 .filter-nav{
-  outline: 2px solid red;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr) 2fr 1fr;
 }
 .filter-nav-list{
 font-family: PT Sans;
@@ -387,24 +404,28 @@ font-weight: 700;
 line-height: 26px;
 letter-spacing: 0px;
 color: var(--color-black);
-grid-column: 2 / 3;
-grid-row: 1 / 1;
 }
 .title:hover{
   color: var(--background-blue);
 }
 .title:active{
-  color: var(--form-background)
+  color: var(--color-black);
+  opacity: 0.3;
+}
+.name-hotel{
+  grid-column: 2 / 4;
+  grid-row: 1;
+
 }
 .resuit-hotels{
   outline: 2px solid yellow;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr  2fr;
-  grid-template-rows: 51px 51px 51px;
-  grid-column: 5px;
+  grid-template-columns: 208px 118px 664px 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .img-result{
-  grid-row: 2 / 3;
+  grid-column: 1 / 1;
+  grid-row: 2;
 }
 .result{
   color: var(--color-brown);
@@ -414,8 +435,19 @@ grid-row: 1 / 1;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0px;
-  grid-column: 2 / 3;
-  grid-row: 2 / 2;
+  grid-column: 2;
+  grid-row: 2;
+}
+.result-cost{
+  color: var(--color-brown);
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  grid-column: 3;
+  grid-row: 2;
 }
 /*кнопка "подробнее*/
 
@@ -430,8 +462,10 @@ background-color: var(--background-blue);
 color: var(--basic-white);
 border: none;
 text-transform: uppercase;
-grid-column: 2 / 2;
-grid-row: 3 / 3;
+width: 110px;
+height: 27px;
+grid-column: 2 / 3;
+grid-row: 3;
 }
 .btn-info:hover{
   background-color: var(--color-aimin-blue);
@@ -450,6 +484,8 @@ letter-spacing: 0px;
 background-color: var(--button-background);
 color: var(--basic-white);
 text-transform: uppercase;
+width: 142px;
+height: 27px;
 grid-column: 3 / 3;
 grid-row: 3 / 3;
 }
