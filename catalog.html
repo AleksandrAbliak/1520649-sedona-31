@@ -23,26 +23,26 @@
 </header>
   <main class="main-catalog">
     <section>
-      <!-- <h1>Фильтр</h1>-->
+      <h1 class="visually-hidden">Фильтр</h1>
       <form action="https://echo.htmlacademy.ru" class="filters" method="get">
         <fieldset>
           <legend class="header-filter" >Инфраструктура</legend>
           <ul>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden">
                     Бассейн
                 </label>
             </li>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label  class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden">
                     Парковка
                 </label>
             </li>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label  class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden">
                     WI-FI
                 </label>
             </li>
@@ -51,21 +51,21 @@
         <fieldset>
           <legend class="header-filter">Тип жилья:</legend>
           <ul>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
                     Гостиница
                 </label>
             </li>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
                     Мотель
                 </label>
             </li>
-            <li>
-                <label>
-                    <input type="checkbox">
+            <li class="filter-input">
+                <label class="filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
                     Апартаменты
                 </label>
             </li>
@@ -73,19 +73,23 @@
         </fieldset>
         <fieldset>
           <legend class="header-filter">Стоимость в сутки,&#8381;: </legend>
-          <ul>
-            <li>
-              <label class="form-cost">
+          <ul class="form-item">
+            <li class="form-cost">
+              <label>
               <input type="text">
               </label>
-              <label class="form-cost">
-              <input type="text">
-              </label>
+              <span class="right-form">
+                <label>
+                  <input type="text">
+                </label>
+              </span>
             </li>
-            <li>
-        <label>
-            <input type="range" min="0">
-        </label>
+            <li class="range">
+        <div class="scale">
+            <div class="bar"></div>
+        </div>
+        <div class="toggle toggle-min"></div>
+        <div class="toggle toggle-max"></div>
         </li>
         <li>
         <label>
@@ -97,7 +101,7 @@
       </form>
     </section>
     <section>
-        <h2>Навигация фильтра</h2>
+        <h2 class="visually-hidden">Навигация фильтра</h2>
         <nav class="section-nav">
         <ul class="filter-nav">
             <li class="filter-nav-list">НАЙДЕНО:</li>
@@ -119,16 +123,25 @@
             </div>
         </nav>
     </section>
-    <section class="resuit-hotels">
+    <section class="result-hotels">
+    <h2 class="visually-hidden">Гостиница Amara Resort</h2>
       <img src="img/catalog/amara.jpg" class="img-result" width="135" height="90" alt="">
         <h3 class="name-hotel"><a href="#" class="title">Amara Resort & Spa</a></h3>
             <p class="result">Гостиница</p>
             <p class="result-cost">от 4000&#8381;</p>
             <button type="button" class="btn-info btn-grid">Подробнее</button>
             <button type="submit" class="btn-reservation btn-grid">Забронировать</button>
+            <div class="star">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <p class="rating">Рейтинг: 8,5</p>
     </section>
-    <section class="resuit-hotels">
+    <section class="result-hotels">
+      <h2 class="visually-hidden">Мотель Desert</h2>
       <img src="img/catalog/desert.jpg" class="img-result" width="135" height="90" alt="">
         <h3 class="name-hotel"><a href="#" class="title">Desert Quail Inn</a></h3>
             <p class="result">Мотель</p>
@@ -137,7 +150,8 @@
             <button type="submit" class="btn-reservation">Забронировать</button>
         <p class="rating">Рейтинг: 8,9</p>
     </section>
-    <section class="resuit-hotels">
+    <section class="result-hotels">
+      <h2 class="visually-hidden">Апартаменты Villas at Poco Diablo</h2>
       <img src="img/catalog/villas.jpg" class="img-result" width="135" height="90" alt="">
         <h3 class="name-hotel"><a href="#" class="title">Villas at Poco Diablo</a></h3>
             <p class="result">Апартаменты</p>
@@ -149,21 +163,26 @@
   </main>
   <footer class="footer">
       <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <p class="hashtag">#visitSEDONA</p>
         <a href="tel:+78005558628" class="tel">+7 800 555-86-28</a>
       </section>
       <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
           <a href="#" class="button-social button-social-twitter">
+            <span class="visually-hidden">Вконтакте</span>
             <svg width="17" height="17" viewBox="0 0 17 17" class="svg-icon" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white"/>
             </svg>
           </a>
           <a href="#" class="button-social button-social-facebook">
+            <span class="visually-hidden">Twitter</span>
             <svg width="12" height="22" viewBox="0 0 12 22" class="svg-twi"  xmlns="http://www.w3.org/2000/svg">
   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
   </svg>
   </a>
           <a href="#" class="button-social button-social-youtube">
+            <span class="visually-hidden">youtube</span>
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
   </svg>
@@ -171,6 +190,7 @@
   </a>
       </section>
       <section class="footer-logo">
+        <h2 class="visually-hidden">Логотип html academy</h2>
         <span>Website by</span>
         <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg width="115" height="34" viewBox="0 0 115 34"  fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,5 +217,5 @@
          </a>
       </section>
   </footer>
-</body>
-</html>
+    </body>
+  </html>
