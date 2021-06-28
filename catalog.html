@@ -30,19 +30,19 @@
           <ul>
             <li class="filter-input">
                 <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden">
+                    <input type="checkbox" class="visually-hidden" checked>
                     Бассейн
                 </label>
             </li>
             <li class="filter-input">
                 <label  class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden">
+                    <input type="checkbox" class="visually-hidden" checked>
                     Парковка
                 </label>
             </li>
             <li class="filter-input">
                 <label  class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden">
+                    <input type="checkbox" class="visually-hidden" checked>
                     WI-FI
                 </label>
             </li>
@@ -53,19 +53,19 @@
           <ul>
             <li class="filter-input">
                 <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden" checked>
                     Гостиница
                 </label>
             </li>
             <li class="filter-input">
                 <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden" checked>
                     Мотель
                 </label>
             </li>
             <li class="filter-input">
                 <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden filter-input-checkbox">
+                    <input type="checkbox" class="visually-hidden" checked>
                     Апартаменты
                 </label>
             </li>
@@ -75,26 +75,22 @@
           <legend class="header-filter">Стоимость в сутки,&#8381;: </legend>
           <ul class="form-item">
             <li class="form-cost">
-              <label>
-              <input type="text">
-              </label>
-              <span class="right-form">
                 <label>
                   <input type="text">
                 </label>
-              </span>
+                <label class="right-form">
+                  <input type="text">
+                </label>
             </li>
             <li class="range">
-        <div class="scale">
-            <div class="bar"></div>
+        <div class="bar">
+            <div class="scale"></div>
         </div>
         <div class="toggle toggle-min"></div>
         <div class="toggle toggle-max"></div>
         </li>
         <li>
-        <label>
-              <button type="submit" name="button" class="button-filter">ПОКАЗАТЬ</button>
-        </label>
+        <button type="submit" name="button" class="button-filter">ПОКАЗАТЬ</button>
         </li>
         </ul>
         </fieldset>
@@ -104,7 +100,7 @@
         <h2 class="visually-hidden">Навигация фильтра</h2>
         <nav class="section-nav">
         <ul class="filter-nav">
-            <li class="filter-nav-list">НАЙДЕНО:</li>
+            <li class="filter-nav-list">НАЙДЕНО: 3</li>
             <li class="filter-item-sort">Сортировка:</li>
             <li><a href="#" class="filter-active">по цене</a></li>
             <li><a href="#" class="filter-item">по типу</a></li>
@@ -131,13 +127,7 @@
             <p class="result-cost">от 4000&#8381;</p>
             <button type="button" class="btn-info btn-grid">Подробнее</button>
             <button type="submit" class="btn-reservation btn-grid">Забронировать</button>
-            <div class="star">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <div class="star-4"></div>
             <p class="rating">Рейтинг: 8,5</p>
     </section>
     <section class="result-hotels">
@@ -148,6 +138,7 @@
             <p class="result-cost">от 3000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
+            <div class="star-3"></div>
         <p class="rating">Рейтинг: 8,9</p>
     </section>
     <section class="result-hotels">
@@ -158,6 +149,7 @@
             <p class="result-cost">от 2000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
+            <div class="star-2"></div>
         <p class="rating">Рейтинг: 9,2</p>
     </section>
   </main>
