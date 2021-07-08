@@ -15,8 +15,8 @@
   </a>
   <ul class="site-navigation">
       <li><a href="#" class="navigation-list">Информация</a></li>
-      <li><a href="#" class="navigation-list">Фото и видео</a></li>
-      <li class="navigation-right"><a href="#" class="navigation-list">Карта штата</a></li>
+      <li class="list-foto"><a href="#" class="navigation-list">Фото и видео</a></li>
+      <li class="list-map"><a href="#" class="navigation-list">Карта штата</a></li>
       <li class="navigation-right"><a class="navigation-list active">Гостиницы</a></li>
   </ul>
   </nav>
@@ -26,53 +26,41 @@
       <h1 class="visually-hidden">Фильтр</h1>
       <form action="https://echo.htmlacademy.ru" class="filters" method="get">
         <fieldset>
-          <legend class="header-filter" >Инфраструктура</legend>
+          <legend class="header-filter-infrastructure" >Инфраструктура</legend>
           <ul>
             <li class="filter-input">
-                <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    Бассейн
-                </label>
+              <input id="filter-pool" type="checkbox" class="visually-hidden filter-input-checkbox" checked>
+              <label for="filter-pool">Бассейн</label>
             </li>
             <li class="filter-input">
-                <label  class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    Парковка
-                </label>
+                <input id="filter-parking" type="checkbox" class="visually-hidden filter-input-checkbox">
+                <label for="filter-parking">Парковка</label>
             </li>
             <li class="filter-input">
-                <label  class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    WI-FI
-                </label>
+                <input id="filter-wifi" type="checkbox" class="visually-hidden filter-input-checkbox">
+                <label for="filter-wifi">WI-FI</label>
             </li>
             </ul>
         </fieldset>
-        <fieldset>
-          <legend class="header-filter">Тип жилья:</legend>
+        <fieldset class="wrepper-fieldset-housing">
+          <legend class="header-filter-housing">Тип жилья:</legend>
           <ul>
             <li class="filter-input">
-                <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    Гостиница
-                </label>
+              <input id="filter-hotel" type="checkbox" class="visually-hidden input-checkbox-housing"  checked>
+              <label for="filter-hotel" class="label-housing">Гостиница</label>
             </li>
             <li class="filter-input">
-                <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    Мотель
-                </label>
+                <input id="filter-mottel" type="checkbox" class="visually-hidden input-checkbox-housing" checked>
+                <label for="filter-mottel" class="label-housing">Мотель</label>
             </li>
             <li class="filter-input">
-                <label class="filter-input-checkbox">
-                    <input type="checkbox" class="visually-hidden" checked>
-                    Апартаменты
-                </label>
+                <input id="filter-apartaments" type="checkbox" class="visually-hidden input-checkbox-housing" checked>
+                <label for="filter-apartaments" class="label-housing">Апартаменты</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend class="header-filter">Стоимость в сутки,&#8381;: </legend>
+        <fieldset class="wrepper-fieldset-cost">
+          <legend class="header-filter-cost">Стоимость в сутки,&#8381;: </legend>
           <ul class="form-item">
             <li class="form-cost">
                 <label>
@@ -132,8 +120,8 @@
     </section>
     <section class="result-hotels">
       <h2 class="visually-hidden">Мотель Desert</h2>
-      <img src="img/catalog/desert.jpg" class="img-result" width="135" height="90" alt="">
-        <h3 class="name-hotel"><a href="#" class="title">Desert Quail Inn</a></h3>
+      <img src="img/catalog/desert.jpg" class="img-result img-result-motel" width="135" height="90" alt="">
+        <h3 class="name-hotel name-motel"><a href="#" class="title">Desert Quail Inn</a></h3>
             <p class="result">Мотель</p>
             <p class="result-cost">от 3000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
@@ -143,8 +131,8 @@
     </section>
     <section class="result-hotels">
       <h2 class="visually-hidden">Апартаменты Villas at Poco Diablo</h2>
-      <img src="img/catalog/villas.jpg" class="img-result" width="135" height="90" alt="">
-        <h3 class="name-hotel"><a href="#" class="title">Villas at Poco Diablo</a></h3>
+      <img src="img/catalog/villas.jpg" class="img-result img-result-motel" width="135" height="90" alt="">
+        <h3 class="name-hotel name-motel"><a href="#" class="title">Villas at Poco Diablo</a></h3>
             <p class="result">Апартаменты</p>
             <p class="result-cost">от 2000&#8381;</p>
             <button type="button" class="btn-info">Подробнее</button>
