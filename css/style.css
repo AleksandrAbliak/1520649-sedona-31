@@ -13,6 +13,8 @@
 --color-dark-brown: #503E33;
 --color-light-grey: #BDBBBC;
 --color-grey-checkbox: #6A6A6A;
+--color-grey-svg: #A9A9A9;
+--color-grey-data: #EBEBEB;
 }
 @font-face {
   font-family: "PT Sans";
@@ -55,6 +57,7 @@ a {
 .page-body {
 width: 1200px;
 min-width: 1200px;
+position: relative;
 background-color: var(--basic-white);
 font-family: "PT Sans", Arial, sans-serif;
 text-transform: uppercase;
@@ -136,8 +139,7 @@ width: 138px;
   position: absolute;
   width: 1200px;
   height: 57px;
-  left: 75px;
-  right: 75px;
+  left: 0;
   top: 509px;
 
 }
@@ -360,6 +362,8 @@ grid-row: 4;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 .arrivel-date{
   grid-column: 2;
@@ -373,7 +377,9 @@ grid-row: 4;
   background-color: var(--form-background);
   align-self: center;
 }
-
+.arrivel-date:hover{
+  background-color: var(--color-grey-data);
+}
 .arrivel-date-input{
   width: 290px;
   font-family: PT Sans;
@@ -382,11 +388,16 @@ grid-row: 4;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0px;
+  text-transform: uppercase;
   background-image: none;
   background-color: transparent;
   border: none;
   margin-left: 13px;
   outline: none;
+}
+.arrivel-date-input:focus{
+  background-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
 }
 .date-of-departure{
   grid-column: 2;
@@ -400,6 +411,9 @@ grid-row: 4;
   height: 36px;
   background-color: var(--form-background);
 }
+.date-of-departure:hover{
+  background-color: var(--color-grey-data);
+}
 .date-of-departure-header{
   grid-column: 1 / 1;
   grid-row: 2 / 2;
@@ -409,6 +423,8 @@ grid-row: 4;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 .date-of-departure-input{
    width: 290px;
@@ -418,16 +434,30 @@ grid-row: 4;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0px;
+  text-transform: uppercase;
   background-image: none;
   background-color: transparent;
   border: none;
   margin-left: 13px;
   outline: none;
 }
+.date-of-departure-input:focus{
+  background-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
+}
 .button-calendar{
   border: none;
   outline: none;
   background-color: var(--form-background);
+}
+.button-calendar:hover{
+  background-color: var(--color-grey-data);
+}
+.button-calendar:hover svg path{
+  fill: var(--color-black);
+}
+.button-calendar:active svg path{
+  fill: var(--background-blue);
 }
 .adults-header{
   grid-column: 1 / 1;
@@ -438,13 +468,15 @@ grid-row: 4;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  margin-top: 0;
+  text-transform: uppercase;
+  margin-top: 28px;
   margin-bottom: 0;
 }
 .adults{
   grid-column: 2 / 2;
   grid-row: 3;
   display: flex;
+  margin-top: 28px;
 }
 .adults-button-minus{
   display: flex;
@@ -458,9 +490,6 @@ grid-row: 4;
   text-decoration: none;
   padding: 0;
   margin: 0;
-}
-.adults-button-minus:hover svg rect{
-  stroke: var(--background-blue);
 }
 .adults-number-input{
   width: 34px;
@@ -484,8 +513,17 @@ grid-row: 4;
   text-decoration: none;
   padding: 0;
 }
+.adults-button-minus:hover svg rect{
+  fill: var(--color-black);
+}
+.adults-button-minus:active svg rect{
+  fill: var(--background-blue);
+}
 .adults-button-plus:hover svg path{
-  stroke: var(--background-blue);
+  fill: var(--color-black);
+}
+.adults-button-plus:active svg path{
+  fill: var(--background-blue);
 }
 .children{
   margin: 0;
@@ -494,6 +532,7 @@ grid-row: 4;
   grid-row: 3;
   display: flex;
   justify-content: flex-end;
+  margin-top: 28px;
 
 }
 .children-header{
@@ -505,8 +544,10 @@ grid-row: 4;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  margin-top: 0;
+  margin-top: 28px;
+  text-transform: uppercase;
   margin-bottom: 0;
+  margin-left: 13px;
 }
 .children-button-minus{
   display: flex;
@@ -521,10 +562,6 @@ grid-row: 4;
   padding: 0;
   margin: 0;
 }
-.children-button-minus:hover svg rect{
-  stroke: var(--background-blue);
-
-}
 .children-button-plus{
   width: 38px;
   height: 38px;
@@ -536,7 +573,16 @@ grid-row: 4;
   padding: 0;
 }
 .children-button-plus:hover svg path{
-  stroke: var(--background-blue);
+  fill: var(--color-black);
+}
+.children-button-plus:active svg path{
+  fill: var(--background-blue);
+}
+.children-button-minus:hover svg rect{
+  fill: var(--color-black);
+}
+.children-button-minus:active svg rect{
+  fill: var(--background-blue);
 }
 .children-number-input{
   width: 34px;
@@ -563,11 +609,17 @@ grid-row: 4;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
+  text-transform: uppercase;
   line-height: 26px;
   border: none;
   color: var(--basic-white);
 }
-
+.button-modal:hover{
+  background-color: var(--color-aimin-blue);
+}
+.button-modal:active{
+  background-color: var(--color-push-blue);
+}
 /* footer */
 .footer{
   width: 1200px;
@@ -579,7 +631,7 @@ grid-row: 4;
 .footer-index{
   position: absolute;
   bottom: 0;
-  background-color: var(--basic-white);
+  background: rgba(255, 255, 255, 0.9);
 }
 .footer-social{
   display: flex;
@@ -750,7 +802,7 @@ margin-left: 92px;
   background-image: url("../img/icon/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin-left: -40px;
+  left: 75px;
 }
 
 .filter-input-checkbox:checked + label::before{
@@ -761,7 +813,17 @@ margin-left: 92px;
   background-image: url("../img/icon/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin-left: -40px;
+  left: 75px;
+}
+.filter-input-checkbox:disabled + label::before{
+  content: "";
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  background-image: url("../img/checkbox-off-block.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 75px;
 }
 .input-checkbox-housing + label::before{
   content: "";
@@ -771,7 +833,17 @@ margin-left: 92px;
   background-image: url("../img/icon/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin-left: -40px;
+  left: 28px;
+}
+.input-checkbox-housing:disabled + label::before{
+  content: "";
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  background-image: url("../img/checkbox-on-block.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 28px;
 }
 .input-checkbox-housing:checked + label::before{
   content: "";
@@ -781,7 +853,10 @@ margin-left: 92px;
   background-image: url("../img/icon/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin-left: -40px;
+  left: 28px;
+}
+.input-disabled:disabled svg{
+  fill: var(--color-grey-checkbox);
 }
 .header-filter-cost{
   font-family: PT Sans;
@@ -802,6 +877,7 @@ margin-left: 92px;
   line-height: 21px;
   letter-spacing: 0px;
   text-align: center;
+  text-transform: uppercase;
   background-image: none;
   background-color: transparent;
   width: 145px;
@@ -815,6 +891,10 @@ margin-left: 92px;
   width: 317px;
   height: 36px;
   margin-left: 72px;
+  margin-top: 0;
+}
+li.form-cost{
+  margin-top: 19px;
 }
 .right-form{
   border-left: 2px solid #FFFFFF;
