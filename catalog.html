@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link href="/css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -14,10 +15,10 @@
       <img src="img/logo.svg" alt="Логотип Седона">
   </a>
   <ul class="site-navigation">
-      <li><a href="#" class="navigation-list">Информация</a></li>
+      <li class="list-information"><a href="#" class="navigation-list li-information">Информация</a></li>
       <li class="list-foto"><a href="#" class="navigation-list">Фото и видео</a></li>
-      <li class="list-map"><a href="#" class="navigation-list">Карта штата</a></li>
-      <li class="navigation-right"><a class="navigation-list active">Гостиницы</a></li>
+      <li class="navigation-right list-map"><a href="#" class="navigation-list">Карта штата</a></li>
+      <li class="navigation-right list-hotel"><a href="catalog.html" class="navigation-list li-hotels">Гостиницы</a></li>
   </ul>
   </nav>
 </header>
@@ -25,7 +26,7 @@
     <section>
       <h1 class="visually-hidden">Фильтр</h1>
       <form action="https://echo.htmlacademy.ru" class="filters" method="get">
-        <fieldset>
+        <fieldset class="wrepper-fieldset-infrastructure">
           <legend class="header-filter-infrastructure" >Инфраструктура</legend>
           <ul>
             <li class="filter-input">
@@ -63,11 +64,13 @@
           <legend class="header-filter-cost">Стоимость в сутки,&#8381;: </legend>
           <ul class="form-item">
             <li class="form-cost">
-                <label>
-                  <input type="text" value="от 0">
-                </label>
-                <label class="right-form">
-                  <input type="text" value="до 3000">
+              <label class="left-form form-cost-label">
+                       от
+              <input type="text" value="0">
+              </label>
+                <label class="right-form form-cost-label">
+                  до
+                  <input type="text" value="3000">
                 </label>
             </li>
             <li class="range">
@@ -99,7 +102,7 @@
                 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
                 </svg>
               </a>
-              <a href="#" class="arrow-sort">
+              <a href="#" class="arrow-sort active-sort">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" fill="#CACACA"/>
                 </svg>
@@ -116,7 +119,9 @@
             <button type="button" class="btn-info btn-grid">Подробнее</button>
             <button type="submit" class="btn-reservation btn-grid">Забронировать</button>
             <div class="star-4"></div>
-            <p class="rating">Рейтинг: 8,5</p>
+            <div class="rating">
+              <p>Рейтинг: 8,5</p>
+            </div>
     </section>
     <section class="result-hotels">
       <h2 class="visually-hidden">Мотель Desert</h2>
@@ -127,7 +132,9 @@
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
             <div class="star-3"></div>
-        <p class="rating">Рейтинг: 8,9</p>
+            <div class="rating">
+              <p>Рейтинг: 8,9</p>
+            </div>
     </section>
     <section class="result-hotels">
       <h2 class="visually-hidden">Апартаменты Villas at Poco Diablo</h2>
@@ -138,7 +145,9 @@
             <button type="button" class="btn-info">Подробнее</button>
             <button type="submit" class="btn-reservation">Забронировать</button>
             <div class="star-2"></div>
-        <p class="rating">Рейтинг: 9,2</p>
+            <div class="rating">
+              <p>Рейтинг: 9,2</p>
+            </div>
     </section>
   </main>
   <footer class="footer">
