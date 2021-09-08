@@ -1,37 +1,225 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html class="page" lang="ru">
 
-You can use the [editor on GitHub](https://github.com/AleksandrAbliak/1520649-sedona-31/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<body class="page-body">
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
+            </a>
+            <ul class="site-navigation">
+                <li class="list-information"><a href="#" class="navigation-list li-information">Информация</a></li>
+                <li class="list-foto"><a href="#" class="navigation-list">Фото и видео</a></li>
+                <li class="navigation-right list-map"><a href="#" class="navigation-list">Карта штата</a></li>
+                <li class="navigation-right list-hotel"><a href="catalog.html" class="navigation-list li-hotels">Гостиницы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section>
+            <div class="main-header-img">
+                <img src="img/welcome-sedona.svg" width="458" height="352" alt="Приветственная надпись Седоны">
+            </div>
+            <div class="main-header-block">
+                <h1 class="main-inscription">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
+                <p class="main-inscription-paragraph">Рассмотрим 5 причин, по которым Седона
+                    круче, чем гранд каньон!</p>
+            </div>
+        </section>
+        <section class="container-hotel">
+            <h2 class="visually-hidden">Причины</h2>
+            <div class="content-block-hotel">
+                <h3>Настоящий<br> городок</h3>
+                <p>— №1 —</p>
+                <p>Седона — не аттракцион для туристов,
+                    там
+                    <br> течёт своя жизнь</p>
+            </div>
+            <div class="content-img">
+                <img src="img/hotel.jpg" width="800" height="256" alt="Отель в Седоне">
+            </div>
 
-### Markdown
+            <div class="content-aside-house">
+                <h3 class="heading-index">ЖИЛЬЁ</h3>
+                <p class="content-p-index">Рекомендуем пожить в настоящем
+                    <br> мотеле, всё как в кино!</p>
+            </div>
+            <div class="content-aside-food">
+                <h3 class="heading-index">ЕДА</h3>
+                <p class="content-p-index">Всегда заказывайте фирменный бургер,
+                    <br> вы не разочаруетесь!</p>
+            </div>
+            <div class="content-aside-souvenir">
+                <h3 class="heading-index">СУВЕНИРЫ</h3>
+                <p class="content-p-index">Не только китайского, но и местного
+                    <br> производства!</p>
+            </div>
+            <div class="content-img-bridge">
+                <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
+            </div>
+            <div class="content-block-bridge">
+                <h3>Там есть<br> Мост дьявола</h3>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно
+                    <br> вы осмелитесь</p>
+            </div>
+            <div class="content-space">
+                <h3 class="content-heading">небольшая<br> площадь</h3>
+                <p>— №3 —</p>
+                <p class="content-p">все достопримечательности
+                    <br> находятся очень близко</p>
+            </div>
+            <div class="content-road">
+                <h3 class="content-heading">красивая<br> дорога</h3>
+                <p>— №4 —</p>
+                <p class="content-p">ехать в седону из лас-вегаса совсем
+                    <br> не скучно!</p>
+            </div>
+            <div class="content-tourist">
+                <h3 class="content-heading">мало<br> туристов</h3>
+                <p>— №5 —</p>
+                <p class="content-p">большинство едет в гранд каньон
+                    <br> и толпится там</p>
+            </div>
+        </section>
+        <form class="search" action="index.html">
+            <section>
+                <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+                <div class="form-search">
+                    <h3 class="form-header">Заинтересовались?</h3>
+                    <p class="form-p">Укажите предполагаемые даты поездки,
+                        <br> и мы покажем вам лучшие предложения
+                        гостиниц в седоне</p>
+                    <button type="button" class="button-search">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+                </div>
+            </section>
+            <section class="modal">
+                <h3 class="arrivel-date-header">Дата заезда:</h3>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+                <input id="arrivel-date" type="text" name="arrivel date" class="arrivel-date arrivel-date-input" value="">
+                <label for="arrivel-date" class="arrivel-date-label">24 апреля 2017</label>
+                <button type="button" name="button" class="arrivel-button-calendar">
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9" />
+                    </svg>
+                </button>
 
-```markdown
-Syntax highlighted code block
+                <h3 class="date-of-departure-header">Дата выезда:</h3>
 
-# Header 1
-## Header 2
-### Header 3
+                <input id="date-of-departure" type="text" name="date-of-departure" class="date-of-departure date-of-departure-input" value="">
+                <label for="date-of-departure" class="date-of-departure-label">4 июля 2017</label>
+                <button type="button" name="button" class="date-button-calendar">
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9" />
+                    </svg>
+                </button>
 
-- Bulleted
-- List
+                <h3 class="adults-header">взрослые:</h3>
+                <div class="adults">
+                    <button type="button" name="button" class="adults-button-minus">
+                        <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="3" fill="#A9A9A9" />
+                        </svg>
+                    </button>
+                    <input id="adults-number" type="text" class="adults-number-input" value="2">
+                    <label for="adults-number"></label>
+                    <button type="button" name="button" class="adults-button-plus">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9" />
+                        </svg>
+                    </button>
 
-1. Numbered
-2. List
+                </div>
+                <h3 class="children-header">дети:</h3>
+                <div class="children">
+                    <button type="button" name="button" class="children-button-minus">
+                        <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="3" fill="#A9A9A9" />
+                        </svg>
+                    </button>
+                    <input id="children-number" type="text" class="children-number-input" value="0">
+                    <label for="children-number"></label>
+                    <button type="button" name="plus" class="children-button-plus">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9" />
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" name="button" class="button-modal">Найти</button>
+            </section>
+        </form>
+        <section class="map-index">
+            <h2 class="visually-hidden">Карта города Седона</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.135657476916!2d-111.83015810420495!3d34.85444381570011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sby!4v1624962499563!5m2!1sen!2sby" width="1199" height="594" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <footer class="footer footer-index">
+        <section class="footer-contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="hashtag">#visitSEDONA</p>
+            <a href="tel:+78005558628" class="tel">+7 800 555-86-28</a>
+        </section>
+        <section class="footer-social">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <a href="#" class="button-social button-social-twitter">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg width="17" height="17" viewBox="0 0 17 17" class="svg-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z" fill="white" />
+                </svg>
+            </a>
+            <a href="#" class="button-social button-social-facebook">
+                <span class="visually-hidden">Twitter</span>
+                <svg width="12" height="22" viewBox="0 0 12 22" class="svg-twi" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+                </svg>
+            </a>
+            <a href="#" class="button-social button-social-youtube">
+                <span class="visually-hidden">youtube</span>
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white" />
+                </svg>
 
-**Bold** and _Italic_ and `Code` text
+            </a>
+        </section>
+        <section class="footer-logo">
+            <h2 class="visually-hidden">Логотип html academy</h2>
+            <span>Website by</span>
+            <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
+                <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black" />
+                        <path d="M11.6466 4.52965C10.0863 4.52965 8.82534 5.23807 8.03454 6.26851H7.94905V0H5.91864V15.4566H7.94905V10.1541C7.94905 8.02886 9.27418 6.50466 11.2191 6.50466C13.0572 6.50466 14.1258 7.87858 14.1258 9.72478V15.4566H16.1563V9.35984C16.1563 6.41878 14.3396 4.52965 11.6466 4.52965Z" fill="black" />
+                        <path d="M26.6171 4.8303H21.8082V1.07349H19.7778V4.8303H17.8542V6.80531H19.7778V12.7947C19.7778 14.5121 20.7396 15.4567 22.4708 15.4567H26.6171V13.4602H22.8769C22.193 13.4602 21.8082 13.0738 21.8082 12.4083V6.80531H26.6171V4.8303Z" fill="black" />
+                        <path d="M41.1215 4.55103C39.497 4.55103 38.2576 5.34532 37.5736 6.61191H37.5095C36.8897 5.3668 35.7356 4.55103 34.154 4.55103C32.7434 4.55103 31.6746 5.30238 31.0336 6.35431H30.948V4.83011H29.0031V15.4565H31.0336V10.0038C31.0336 8.00729 32.0806 6.54752 33.6624 6.50458C35.1584 6.46164 36.0347 7.53502 36.0347 9.14507V15.4565H38.0652V9.83203C38.0652 7.44915 39.4758 6.50458 40.6941 6.50458C42.1688 6.50458 43.0452 7.53502 43.0452 9.14507V15.4565H45.0754V8.9304C45.0754 6.35431 43.6221 4.55103 41.1215 4.55103Z" fill="black" />
+                        <path d="M47.8272 12.7088C47.8272 14.4476 48.8104 15.4566 50.627 15.4566H52.636V13.4816H50.9262C50.2422 13.4816 49.8574 13.0952 49.8574 12.4297V0H47.8272V12.7088Z" fill="black" />
+                        <path d="M28.9048 19.7063H28.8192C28.027 18.6392 26.7425 17.8923 25.0295 17.8709C21.882 17.8282 19.6338 20.1544 19.6338 23.441C19.6338 26.749 21.9248 29.0752 25.008 29.0326C26.7637 29.0111 28.027 28.2215 28.8192 27.0903H28.9048V28.7336H30.9177V18.1697H28.9048V19.7063ZM25.3077 27.0691C23.081 27.0691 21.6679 25.4471 21.6679 23.441C21.6679 21.435 23.081 19.813 25.3077 19.813C27.4703 19.813 28.8836 21.435 28.8836 23.441C28.8836 25.4259 27.4703 27.0691 25.3077 27.0691Z" fill="black" />
+                        <path d="M44.2094 22.0111C43.7169 19.6208 41.5972 17.8708 38.8138 17.8708C35.4523 17.8708 33.2042 20.3251 33.2042 23.4409C33.2042 26.5567 35.4523 29.0325 38.8138 29.0325C41.5972 29.0325 43.7169 27.2397 44.2094 24.8281H42.0898C41.6616 26.1727 40.3983 27.0903 38.8353 27.0903C36.6513 27.0903 35.238 25.447 35.238 23.4409C35.238 21.4349 36.6513 19.8129 38.8353 19.8129C40.4624 19.8129 41.6616 20.7733 42.0898 22.0111H44.2094Z" fill="black" />
+                        <path d="M55.0836 19.7063H54.998C54.2057 18.6392 52.921 17.8923 51.208 17.8709C48.0606 17.8282 45.8124 20.1544 45.8124 23.441C45.8124 26.749 48.1035 29.0752 51.1866 29.0326C52.9424 29.0111 54.2057 28.2215 54.998 27.0903H55.0836V28.7336H57.0962V18.1697H55.0836V19.7063ZM51.4865 27.0691C49.2595 27.0691 47.8465 25.4471 47.8465 23.441C47.8465 21.435 49.2595 19.813 51.4865 19.813C53.6491 19.813 55.0621 21.435 55.0621 23.441C55.0621 25.4259 53.6491 27.0691 51.4865 27.0691Z" fill="black" />
+                        <path d="M68.6538 19.813H68.5682C67.776 18.6819 66.4483 17.8923 64.7568 17.871C61.6738 17.8283 59.3827 20.1545 59.3827 23.4624C59.3827 26.749 61.6309 29.0753 64.7783 29.0326C66.4483 29.0111 67.776 28.2642 68.5468 27.1972H68.6538V28.7336H70.6665V13.3679H68.6538V19.813ZM65.0568 27.0904C62.8298 27.0904 61.4168 25.4685 61.4168 23.4624C61.4168 21.4563 62.8298 19.8343 65.0568 19.8343C67.2193 19.8343 68.6324 21.4776 68.6324 23.4624C68.6324 25.4685 67.2193 27.0904 65.0568 27.0904Z" fill="black" />
+                        <path d="M78.3297 17.8708C75.0752 17.8708 72.8483 20.3678 72.8483 23.4623C72.8483 26.4714 74.9467 29.0325 78.3724 29.0325C80.8561 29.0325 82.8475 27.6879 83.5541 25.447H81.4342C80.9634 26.4502 79.8286 27.0903 78.4582 27.0903C76.5312 27.0903 75.1608 25.8098 75.0108 24.1666H83.7682C84.0464 20.6452 81.8412 17.8708 78.3297 17.8708ZM78.2868 19.8129C79.9783 19.8129 81.2416 20.8586 81.5627 22.3739H75.0538C75.3534 20.88 76.6168 19.8129 78.2868 19.8129Z" fill="black" />
+                        <path d="M98.1985 17.8921C96.5713 17.8921 95.3295 18.6817 94.6443 19.9409H94.5799C93.9591 18.703 92.8029 17.8921 91.2184 17.8921C89.8054 17.8921 88.7347 18.639 88.0924 19.6848H88.0068V18.1695H86.0583V28.7334H88.0924V23.3128C88.0924 21.328 89.1417 19.8768 90.7261 19.8341C92.2247 19.7915 93.1028 20.8585 93.1028 22.4591V28.7334H95.1368V23.1421C95.1368 20.7732 96.5499 19.8341 97.7703 19.8341C99.2477 19.8341 100.125 20.8585 100.125 22.4591V28.7334H102.16V22.2457C102.16 19.6848 100.704 17.8921 98.1985 17.8921Z" fill="black" />
+                        <path d="M109.441 27.0477L105.801 18.1697H103.553L108.392 29.7368L108.371 29.7794C108.028 30.6544 107.643 30.9745 106.701 30.9745H104.196V33.0019H106.701C108.542 33.0019 109.527 32.1696 110.212 30.3769L114.88 18.1697H112.803L109.441 27.0477Z" fill="black" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="115" height="33.0294" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </section>
+    </footer>
+</body>
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AleksandrAbliak/1520649-sedona-31/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
